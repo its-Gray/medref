@@ -1,27 +1,26 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 // import Review from './Review';
-import { FaHospital, FaUserMd, FaCalendarCheck, FaHeartbeat, FaAmbulance, FaLaptopMedical } from 'react-icons/fa';
-import Slider from 'react-slick'; 
-import 'slick-carousel/slick/slick.css'; 
+import { FaAmbulance, FaCalendarCheck, FaHeartbeat, FaHospital, FaLaptopMedical, FaUserMd } from 'react-icons/fa';
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
 const Home = () => {
     const features = [
 
       { icon: FaHospital, title: 'State-of-the-Art Facilities', description: 'Experience healthcare in our modern, well-equipped facilities.' },
-  
+
       { icon: FaUserMd, title: 'Expert Medical Staff', description: 'Our team of experienced doctors and nurses provide top-notch care.' },
-  
+
       { icon: FaCalendarCheck, title: 'Easy Appointments', description: 'Book and manage your appointments with just a few clicks.' },
-  
+
       { icon: FaHeartbeat, title: 'Comprehensive Care', description: 'From preventive care to complex treatments, we’ve got you covered.' },
-  
+
       { icon: FaAmbulance, title: '24/7 Emergency Services', description: 'Round-the-clock emergency care for your peace of mind.' },
-  
+
       { icon: FaLaptopMedical, title: 'Telemedicine', description: 'Get expert medical advice from the comfort of your home.' }
-  
+
   ];
     const testimonials = [
       {
@@ -97,11 +96,7 @@ const images = [
       src: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       alt: "Modern Hospital",
   },
-  
-  {
-      src: "https://i.ytimg.com/vi/XCxz9yyEkmg/maxresdefault.jpg",
-      alt: "Patient Care",
-  },
+
   {
     src: "https://5.imimg.com/data5/SELLER/Default/2021/10/YI/WX/NZ/30422219/hospitality-interior-design-service-1000x1000.jpg",
     alt: "Patient Care",
@@ -179,7 +174,7 @@ const images = [
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-100 object-cover" 
+              className="w-full h-100 object-cover"
               style={{ height: '400px', width: '100%', objectFit: 'cover' }}
             />
           </div>
@@ -229,7 +224,7 @@ const images = [
             {testimonials.map((testimonial, index) => (
                 <motion.div
                     key={index}
-                    className="bg-white p-6 rounded-xl h-55 w-250 mx-2 cursor-pointer transition-all ease-out hover:font-semibold" 
+                    className="bg-white p-6 rounded-xl h-55 w-250 mx-2 cursor-pointer transition-all ease-out hover:font-semibold"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -238,7 +233,7 @@ const images = [
                     <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-16 h-16 rounded-full mx-auto mb-4" 
+                        className="w-16 h-16 rounded-full mx-auto mb-4"
                     />
                     <p className="text-gray-600 mb-4 text-center text-sm">
                         "{testimonial.text}"

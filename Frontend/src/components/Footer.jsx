@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaHeart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { FaHeart, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +33,7 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href={link.href}
-                  target="_blank" 
+                  target="_blank"
                   className="text-light hover:text-accent transition-colors duration-300"
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
@@ -66,7 +65,7 @@ const Footer = () => {
           <p className="mt-2 flex items-center justify-center">
             Made with <FaHeart className="text-accent mx-1" /> by {" "}
             <a
-              href="https://dennisportfolio-theta.vercel.app/"
+              href="https://portfoliowebsite-ashy-seven.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent underline hover:text-accent/80"
